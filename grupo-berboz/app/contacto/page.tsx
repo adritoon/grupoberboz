@@ -1,18 +1,19 @@
-'use client'; // <-- Necesario para manejar el estado del formulario
+'use client'; 
 
 import React from 'react';
 import { useActionState } from 'react';
 import { useFormStatus } from 'react-dom';
-import { sendContactMessage } from '../actions'; // <-- Importamos nuestra action
+// 1. IMPORTA EL TIPO Y LA FUNCIÓN
+import { sendContactMessage, type FormState } from '../actions';
 
-// Componente separado para el botón, para que pueda saber si se está enviando
+// (El componente SubmitButton no cambia)
 function SubmitButton() {
-  const { pending } = useFormStatus(); // hook mágico
+  const { pending } = useFormStatus();
 
   return (
     <button
       type="submit"
-      disabled={pending} // Deshabilita el botón mientras envía
+      disabled={pending}
       className="bg-blue-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-700 disabled:bg-gray-500 transition-colors"
     >
       {pending ? 'Enviando...' : 'Enviar Mensaje'}
@@ -21,14 +22,18 @@ function SubmitButton() {
 }
 
 export default function ContactoPage() {
-  // Hook para manejar el estado del formulario (éxito, errores)
-  const initialState = { message: null, errors: {} };
+  // 2. ACTUALIZA EL ESTADO INICIAL
+  // Ahora usa el tipo 'FormState' y 'undefined' en lugar de 'null'
+  const initialState: FormState = {
+    message: undefined,
+    errors: {},
+  };
   const [state, dispatch] = useActionState(sendContactMessage, initialState);
 
   return (
     <div className="text-foreground bg-background">
       
-      {/* Sección 1: Título de la Página */}
+      {/* Sección 1: Título (sin cambios) */}
       <section className="container mx-auto px-6 py-16 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">
           Contáctanos
@@ -39,11 +44,11 @@ export default function ContactoPage() {
         </p>
       </section>
 
-      {/* Sección 2: Formulario y Datos */}
+      {/* Sección 2: Formulario y Datos (sin cambios en el HTML) */}
       <section className="container mx-auto px-6 pb-16 md:pb-24">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           
-          {/* Columna Izquierda: Información de Contacto (sin cambios) */}
+          {/* Columna Izquierda: Información (sin cambios) */}
           <div className="text-foreground">
             <h2 className="text-3xl font-bold mb-6">
               Información Directa
@@ -67,13 +72,12 @@ export default function ContactoPage() {
             </div>
           </div>
 
-          {/* Columna Derecha: Formulario CONECTADO */}
+          {/* Columna Derecha: Formulario CONECTADO (sin cambios en el HTML) */}
           <div className="text-foreground">
             <h2 className="text-3xl font-bold mb-6">
               Envíanos un Mensaje
             </h2>
             
-            {/* El <form> ahora usa 'dispatch' (la Server Action) */}
             <form action={dispatch} className="space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-medium mb-1">
@@ -82,10 +86,9 @@ export default function ContactoPage() {
                 <input
                   type="text"
                   id="name"
-                  name="name" // <-- El atributo 'name' es vital
+                  name="name"
                   className="w-full p-2 rounded bg-foreground/5 border border-foreground/10"
                 />
-                {/* Muestra errores de validación */}
                 {state.errors?.name && <p className="text-sm text-red-500 mt-1">{state.errors.name}</p>}
               </div>
               
@@ -96,7 +99,7 @@ export default function ContactoPage() {
                 <input
                   type="email"
                   id="email"
-                  name="email" // <-- El atributo 'name' es vital
+                  name="email"
                   className="w-full p-2 rounded bg-foreground/5 border border-foreground/10"
                 />
                 {state.errors?.email && <p className="text-sm text-red-500 mt-1">{state.errors.email}</p>}
@@ -108,7 +111,7 @@ export default function ContactoPage() {
                 </label>
                 <textarea
                   id="message"
-                  name="message" // <-- El atributo 'name' es vital
+                  name="message"
                   rows={4}
                   className="w-full p-2 rounded bg-foreground/5 border border-foreground/10"
                 ></textarea>
@@ -117,7 +120,6 @@ export default function ContactoPage() {
               
               <SubmitButton />
 
-              {/* Muestra mensaje de Éxito o de Error de la API */}
               {state.message && <p className="text-sm text-green-500 mt-2">{state.message}</p>}
               {state.errors?.api && <p className="text-sm text-red-500 mt-2">{state.errors.api}</p>}
             </form>
