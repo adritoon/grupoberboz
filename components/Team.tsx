@@ -3,7 +3,7 @@ import Image from 'next/image'; // Importante para las imágenes
 
 export const Team = () => {
   return (
-    <section className="bg-background py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-gradient-to-t from-brand/5 to-background">
       <div className="container mx-auto px-6 text-foreground">
 
         {/* Título de la Sección */}

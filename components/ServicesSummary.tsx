@@ -20,7 +20,7 @@ export const ServicesSummary = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
           {/* Tarjeta 1: Limpieza */}
-          <div className="bg-foreground/5 border border-foreground/10 rounded-lg p-8 text-center">
+          <div className="bg-foreground/5 border border-foreground/10 rounded-lg p-8 text-center transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:border-brand/50">
             {/* 2. AÑADE EL ICONO DE LIMPIEZA */}
             <WandSparkles
               className="w-12 h-12 text-brand mx-auto mb-4"
@@ -42,7 +42,7 @@ export const ServicesSummary = () => {
           </div>
 
           {/* Tarjeta 2: Seguridad */}
-          <div className="bg-foreground/5 border border-foreground/10 rounded-lg p-8 text-center">
+          <div className="bg-foreground/5 border border-foreground/10 rounded-lg p-8 text-center transition-all duration-300 hover:scale-[1.03] hover:shadow-xl hover:border-brand/50">
             {/* 3. AÑADE EL ICONO DE SEGURIDAD */}
             <ShieldCheck
               className="w-12 h-12 text-brand mx-auto mb-4"

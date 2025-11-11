@@ -1,6 +1,12 @@
 import React from 'react';
 // 1. IMPORTA EL COMPONENTE DE ANIMACIÓN
 import { FadeIn } from '@/components/FadeIn';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Nuestros Servicios',
+  description: 'Conoce nuestros servicios detallados de limpieza integral, especializada, y seguridad y vigilancia privada.',
+};
 
 export default function ServiciosPage() {
   return (

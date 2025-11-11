@@ -3,6 +3,12 @@ import { MissionVision } from '@/components/MissionVision';
 import { Team } from '@/components/Team';
 // 1. IMPORTA EL COMPONENTE DE ANIMACIÓN
 import { FadeIn } from '@/components/FadeIn';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Quiénes Somos',
+  description: 'Conoce nuestra misión, visión y al equipo de profesionales de Grupo Integrado Berboz.',
+};
 
 export default function QuienesSomosPage() {
   return (

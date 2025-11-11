@@ -1,5 +1,6 @@
 import { Hero } from '@/components/Hero';
-import { SocialProof } from '@/components/SocialProof';
+// 1. IMPORTA EL NUEVO CARRUSEL
+import { ClientCarousel } from '@/components/ClientCarousel';
 import { ServicesSummary } from '@/components/ServicesSummary';
 import { FadeIn } from '@/components/FadeIn';
 
@@ -8,12 +9,11 @@ export default function Home() {
     <>
       <Hero />
       
-      {/* 2. ENVUELVE LA SECCIÓN DE PRUEBA SOCIAL */}
+      {/* 2. REEMPLAZA SocialProof POR ClientCarousel */}
       <FadeIn>
-        <SocialProof />
+        <ClientCarousel />
       </FadeIn>
       
-      {/* 3. ENVUELVE LA SECCIÓN DE SERVICIOS */}
       <FadeIn delay={0.2}>
         <ServicesSummary />
       </FadeIn>

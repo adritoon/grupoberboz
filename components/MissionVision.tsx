@@ -2,7 +2,7 @@ import React from 'react';
 
 export const MissionVision = () => {
   return (
-    <section className="bg-foreground/5 py-16 md:py-24">
+    <section className="py-16 md:py-24 bg-gradient-to-b from-brand/5 to-background">
       <div className="container mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
           
