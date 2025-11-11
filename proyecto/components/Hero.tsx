@@ -18,8 +18,8 @@ export const Hero = () => {
       {/* Filtro oscuro (para que el texto se lea) */}
       <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
       {/* Contenido */}
-      <div className="relative z-20 px-6 py-12">
-        <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4">
+      <div className="relative z-20 p-6">
+        <h1 className="text-4xl md:text-6xl font-bold mb-4">
           Soluciones Integrales en Limpieza y Seguridad
         </h1>
         <p className="text-lg md:text-xl mb-8 max-w-2xl mx-auto">
@@ -27,16 +27,16 @@ export const Hero = () => {
         </p>
         
         {/* Botones CTA (Call to Action) */}
-        <div className="flex flex-col md:flex-row gap-4 items-center justify-center">
+        <div className="space-x-4">
           <Link
             href="/contacto"
-            className="w-full md:w-auto bg-brand text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-brand-hover transition duration-300"
+            className="bg-brand text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-brand-hover transition duration-300"
           >
             Solicitar Cotización
           </Link>
           <Link
             href="/servicios"
-            className="w-full md:w-auto bg-transparent border-2 border-white text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition duration-300"
+            className="bg-transparent border-2 border-white text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-white hover:text-gray-900 transition duration-300"
           >
             Ver Servicios
           </Link>
