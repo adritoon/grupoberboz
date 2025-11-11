@@ -1,38 +1,30 @@
 @import "tailwindcss";
 
-/* 1. Definición de variables de color */
 :root {
   /* Paleta de Marca */
-  --color-brand: #004a99; /* Este es nuestro "Berboz Blue" */
-  --color-brand-hover: #003a7a; /* Un tono más oscuro para 'hover' */
+  --color-brand: #004a99;
+  --color-brand-hover: #003a7a;
 
-  /* Paleta Modo Claro (Por defecto) */
-  --background: #ffffff; /* Fondo blanco puro */
-  --foreground: #111827; /* Texto gris muy oscuro (en lugar de negro) */
-  --muted: #6b7280;      /* Texto secundario/apagado */
+  /* Paleta ÚNICA (Modo Oscuro Forzado) */
+  --background-canvas: #030712; /* Fondo casi negro */
+  --background-card: #0f172a;   /* Fondo gris oscuro para secciones */
+  --foreground: #f9fafb;      /* Texto casi blanco */
+  --muted: #9ca3af;          /* Texto gris */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Paleta Modo Oscuro */
-    --background: #030712; /* Fondo casi negro */
-    --foreground: #f9fafb; /* Texto casi blanco */
-    --muted: #9ca3af;      /* Texto secundario/apagado */
-  }
-}
+/* ... Se fue el @media ... */
 
-/* 2. Decirle a Tailwind que use nuestras variables */
 @theme inline {
-  --color-background: var(--background);
+  --color-background: var(--background-canvas);
+  --color-card: var(--background-card);
   --color-foreground: var(--foreground);
   --color-muted: var(--muted);
   --color-brand: var(--color-brand);
   --color-brand-hover: var(--color-brand-hover);
 }
 
-/* 3. Aplicar el fondo y color base */
 body {
-  background: var(--background);
+  background: var(--background-canvas);
   color: var(--foreground);
 }
 
