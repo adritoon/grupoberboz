@@ -64,8 +64,8 @@ export default function ContactoPage() {
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Llámanos</h3>
-                  <p className="text-muted">(51) 934339277</p>
-                  <p className="text-muted">(51) 993718535</p>
+                  <p className="text-muted">(+51) 934339277</p>
+                  <p className="text-muted">(+51) 993718535</p>
                 </div>
                 <div>
                   <h3 className="text-lg font-semibold">Redes Sociales</h3>

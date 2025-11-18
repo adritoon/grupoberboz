@@ -1,10 +1,10 @@
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import './globals.css';
-import { Navbar } from '@/components/Navbar'; // Esto ya estaba
-import { Footer } from '@/components/Footer'; // 1. IMPORTA EL FOOTER
+import { Navbar } from '@/components/Navbar'; 
+import { Footer } from '@/components/Footer'; 
 import Link from 'next/link';
-import { MessageCircle } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: 'Grupo Berboz',
     images: [
       {
-        url: `${siteUrl}/og-image.png`, // La imagen que creaste
+        url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'Logo de Grupo Integrado Berboz',
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
-  twitter: { // Para que se vea bien en Twitter
+  twitter: { 
     card: 'summary_large_image',
     title: 'Grupo Integrado Berboz E.I.R.L.',
     description: 'Soluciones integrales en limpieza y seguridad privada.',
@@ -69,7 +69,7 @@ export default function RootLayout({
     address: {
       '@type': 'PostalAddress',
       addressCountry: 'PE',
-      // (Añade más datos si tu primo te los da)
+      // (Añade más datos)
       // addressLocality: 'Lima',
       // postalCode: 'LIMA 39',
       // streetAddress: 'Av. Las Palmeras 123'
@@ -93,13 +93,13 @@ export default function RootLayout({
         
         <Footer />
         <Link
-          href="https://wa.me/51991319975" // <-- USA EL NÚMERO DE TU PRIMO
+          href="https://wa.me/56981319935"
           target="_blank"
           rel="noopener noreferrer"
           className="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 hover:scale-110 transition-all duration-300 z-50"
           aria-label="Contactar por WhatsApp"
         >
-          <MessageCircle size={28} />
+          <FaWhatsapp size={28} />
         </Link>
       </body>
     </html>

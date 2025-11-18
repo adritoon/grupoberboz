@@ -7,9 +7,9 @@ import 'keen-slider/keen-slider.min.css';
 
 // 1. ESTA ES TU LISTA ORIGINAL (pon los que quieras)
 const originalClients = [
-  { name: 'Lays', path: '/clientes/lays.png' },
-  { name: 'Muni de Lima', path: '/clientes/munilima.jpg' },
-  { name: 'Cliente Siguiente', path: '/logos/cliente-3.png' },
+  { name: 'Lays', path: '/clientes/logo1.jpg' },
+  { name: 'Muni de Lima', path: '/clientes/logo2.jpg' },
+  { name: 'Cliente Siguiente', path: '/clientes/logo3.jpg' },
   // ...puedes tener 3, 4, 5... los que sean
 ];
 

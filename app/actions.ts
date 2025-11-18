@@ -47,7 +47,7 @@ export async function sendContactMessage(
   try {
     await resend.emails.send({
       from: 'onboarding@resend.dev',
-      to: 'adrian13759@gmail.com', // <-- RECUERDA CAMBIAR ESTO
+      to: 'adrian13759@gmail.com', 
       subject: `Nuevo Mensaje de Contacto de: ${name}`,
       html: `
         <p><strong>De:</strong> ${name} (${email})</p>
