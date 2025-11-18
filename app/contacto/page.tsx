@@ -30,7 +30,7 @@ export default function ContactoPage() {
   const [state, dispatch] = useActionState(sendContactMessage, initialState);
 
   return (
-    <div className="text-foreground bg-background">
+    <div className="text-foreground bg-background break-words">
       
       {/* 2. ENVUELVE LA SECCIÓN 1 */}
       <FadeIn>

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function QuienesSomosPage() {
   return (
-    <div className="text-foreground">
+    <div className="text-foreground break-words">
       
       {/* 2. ENVUELVE LA SECCIÓN 1 */}
       <FadeIn>
